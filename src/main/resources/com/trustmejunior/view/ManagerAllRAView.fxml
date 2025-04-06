@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Manager.ManagerAllRAView">
+   <children>
+      <Text layoutX="55.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search for Rental Management: " />
+      <TextField fx:id="textfieldSearchBar" layoutX="233.0" layoutY="96.0" prefHeight="26.0" prefWidth="453.0" />
+      <AnchorPane prefHeight="86.0" prefWidth="800.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="109.0" layoutY="31.0" text="Rental Agreement Management">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="RALogoImageView" fitHeight="52.0" fitWidth="75.0" layoutX="41.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="17.33333333333333" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="18.0">
+               <image>
+                  <Image url="@../images/RALogoremovebg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="TableViewALLRA" layoutX="55.0" layoutY="162.0" prefHeight="429.0" prefWidth="632.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="fee" prefWidth="75.0" text="Fee" />
+            <TableColumn fx:id="startDate" prefWidth="80.00003051757812" text="Start Date" />
+            <TableColumn fx:id="endDate" prefWidth="80.00007629394531" text="End Date" />
+            <TableColumn fx:id="period" prefWidth="76.66668701171875" text="Period" />
+            <TableColumn fx:id="status" prefWidth="90.66668701171875" text="Status" />
+            <TableColumn fx:id="owner_id" prefWidth="77.33334350585938" text="Owner ID" />
+            <TableColumn fx:id="property_id" prefWidth="92.6666259765625" text="Property ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="createRAButton" layoutX="735.0" layoutY="490.0" mnemonicParsing="false" onAction="#createRA" prefHeight="32.0" prefWidth="72.0" styleClass="button-primary" text="Create" />
+      <Button fx:id="viewRAButton" layoutX="837.0" layoutY="490.0" mnemonicParsing="false" onAction="#viewRA" prefHeight="32.0" prefWidth="72.0" styleClass="button-primary" text="View" />
+      <Button fx:id="editRAButton" layoutX="735.0" layoutY="538.0" mnemonicParsing="false" onAction="#editRA" prefHeight="32.0" prefWidth="72.0" styleClass="button-primary" text="Modify" />
+      <Button fx:id="deleteRAButton" layoutX="837.0" layoutY="538.0" mnemonicParsing="false" onAction="#deleteRA" prefHeight="32.0" prefWidth="72.0" styleClass="button-primary" text="Delete" />
+      <Text layoutX="137.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:" />
+      <ComboBox fx:id="droplistRAPeriod" layoutX="747.0" layoutY="303.0" prefWidth="150.0" promptText="Period" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistRAStatus" layoutX="747.0" layoutY="357.0" prefWidth="150.0" promptText="Status" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <Button fx:id="removeFilterButton" layoutX="755.0" layoutY="416.0" mnemonicParsing="false" onAction="#removeFilter" styleClass="button-danger" stylesheets="@../css/global.css" text="Remove Filters">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="startDatePicker" layoutX="183.0" layoutY="130.0" stylesheets="@../css/global.css" />
+      <Text layoutX="367.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+      <DatePicker fx:id="endDatePicker" layoutX="391.0" layoutY="130.0" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistProperty" layoutX="748.0" layoutY="195.0" prefWidth="150.0" promptText="Property" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistFee" layoutX="748.0" layoutY="249.0" prefWidth="150.0" promptText="Fee" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistOwnerId" layoutX="747.0" layoutY="142.0" prefWidth="150.0" promptText="Owner" styleClass="combo-box" stylesheets="@../css/global.css" />
+   </children>
+</AnchorPane>

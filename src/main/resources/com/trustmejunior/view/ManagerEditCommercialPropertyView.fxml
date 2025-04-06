@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Manager.ManagerEditCommercialPropertyView">
+   <children>
+      <Label layoutX="351.0" layoutY="47.0" styleClass="text-header" text="Edit Commercial Property" />
+      <Text layoutX="100.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Price:" />
+      <TextField fx:id="priceInput" layoutX="220.0" layoutY="130.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Address:" />
+      <TextField fx:id="addressInput" layoutX="220.0" layoutY="174.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Status:" />
+      <ChoiceBox fx:id="statusInput" layoutX="220.0" layoutY="216.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Business Type:" />
+      <ChoiceBox fx:id="businessTypeInput" layoutX="220.0" layoutY="257.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Area:" />
+      <TextField fx:id="areaInput" layoutX="220.0" layoutY="297.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Has Parking:" />
+      <RadioButton fx:id="hasParkingYes" layoutX="220.0" layoutY="342.0" mnemonicParsing="false" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="hasParkingInput" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="hasParkingNo" layoutX="330.0" layoutY="342.0" mnemonicParsing="false" selected="true" text="No" toggleGroup="$hasParkingInput" />
+      <Text layoutX="560.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Owner" />
+      <ComboBox fx:id="ownerInput" layoutX="680.0" layoutY="130.0" prefWidth="200.0" promptText="Select owner" />
+      <Text layoutX="560.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Hosts:" />
+      <ListView fx:id="hostsInput" layoutX="680.0" layoutY="174.0" prefHeight="80.0" prefWidth="200.0" />
+      <Text layoutX="560.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Image:" />
+      <AnchorPane layoutX="680.0" layoutY="260.0">
+         <children>
+            <ImageView fx:id="propertyImage" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="removeImageButton" layoutY="0.0" mnemonicParsing="false" onAction="#removeImage" styleClass="button-danger" text="X" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="chooseImageButton" layoutX="560.0" layoutY="290.0" mnemonicParsing="false" onAction="#chooseImage" styleClass="button-primary" text="Choose image" />
+      <Button fx:id="updateCommercialPropertyButton" layoutX="442.0" layoutY="450.0" mnemonicParsing="false" onAction="#updateCommercialProperty" styleClass="button-primary" text="Update" />
+      <Button fx:id="returnHomeButton" layoutX="424.0" layoutY="495.0" mnemonicParsing="false" onAction="#returnHome" styleClass="button-secondary" text="Return Home" />
+   </children>
+</AnchorPane>

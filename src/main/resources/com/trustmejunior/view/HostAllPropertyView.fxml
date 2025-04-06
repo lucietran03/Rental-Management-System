@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Host.HostAllPropertyView">
+   <children>
+      <AnchorPane prefHeight="86.0" prefWidth="800.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="ManagerLogoImageView" fitHeight="57.0" fitWidth="68.0" layoutX="21.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="17.400000000000006" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../images/property.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="96.0" layoutY="31.0" text="Property Management">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="53.0" layoutY="109.0" text="Search for Property:" />
+      <TextField fx:id="textfieldsearch" layoutX="188.0" layoutY="103.0" prefHeight="26.0" prefWidth="539.0" />
+      <TableView fx:id="TableAllPropertyManagerView" layoutX="53.0" layoutY="146.0" prefHeight="440.0" prefWidth="675.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="146.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="price" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="address" prefWidth="150.0" text="Address" />
+            <TableColumn fx:id="status" prefWidth="150.0" text="Status" />
+            <TableColumn fx:id="type" prefWidth="150.0" text="Type" />
+            <TableColumn fx:id="owner_id" prefWidth="70.0" text="Owner ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="viewPropertyButton" layoutX="766.0" layoutY="130.0" mnemonicParsing="false" onAction="#viewProperty" styleClass="button-primary" text="View Property Detail" />
+      <Button fx:id="editPropertyButton" layoutX="780.0" layoutY="173.0" mnemonicParsing="false" onAction="#editProperty" styleClass="button-primary" text="Modify Property" />
+      <ComboBox fx:id="droplistPropertyType" layoutX="763.0" layoutY="348.0" prefHeight="41.0" prefWidth="164.0" promptText="Property Type" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistPropertyCriteria" layoutX="763.0" layoutY="406.0" prefHeight="41.0" prefWidth="164.0" promptText="Property Criteria" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistPropertyValue" layoutX="763.0" layoutY="466.0" prefHeight="42.0" prefWidth="164.0" promptText="Criteria Value" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <Button fx:id="handleViewAllButton" layoutX="784.0" layoutY="531.0" mnemonicParsing="false" onAction="#handleViewAll" styleClass="button-danger" stylesheets="@../css/global.css" text="Remove Filters" />
+      <ComboBox fx:id="droplistPrice" layoutX="763.0" layoutY="233.0" prefHeight="41.0" prefWidth="164.0" promptText="Price" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <ComboBox fx:id="droplistOwnerId" layoutX="762.0" layoutY="290.0" prefHeight="41.0" prefWidth="164.0" promptText="Owner ID" styleClass="combo-box" stylesheets="@../css/global.css" />
+   </children>
+</AnchorPane>

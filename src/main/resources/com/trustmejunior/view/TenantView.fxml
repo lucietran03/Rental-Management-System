@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Tenant.TenantView">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="ImageViewTenantLogo" fitHeight="49.0" fitWidth="50.0" layoutX="41.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.578569793701178" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="869.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../images/tenantlogo4removebg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="28.0" text="Tenant Homepage">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="70.4" prefHeight="530.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="147.0" layoutY="39.0" text="TrustMe Rental Management System">
+               <font>
+                  <Font name="Tahoma Bold" size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97d5fc" height="182.0" layoutX="147.0" layoutY="153.0" stroke="WHITE" strokeType="INSIDE" width="667.0" AnchorPane.bottomAnchor="241.0" />
+      <Label layoutX="316.0" layoutY="210.0" text="Welcome back,">
+         <font>
+            <Font name="Tahoma Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="155.0" fitWidth="152.0" layoutX="164.0" layoutY="191.0">
+         <image>
+            <Image url="@../images/boy.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nameField" layoutX="312.0" layoutY="268.0" prefHeight="51.0" prefWidth="495.0" text="name">
+         <font>
+            <Font name="Tahoma Bold" size="40.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfe0ff" height="138.0" layoutX="549.0" layoutY="362.0" stroke="WHITE" strokeType="INSIDE" width="359.0" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfe0ff" height="138.0" layoutX="72.0" layoutY="362.0" stroke="WHITE" strokeType="INSIDE" width="359.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="70.0" />
+      <Label fx:id="homeTotalPayment" layoutX="90.0" layoutY="480.0" prefHeight="46.0" prefWidth="243.0" text="10000000">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="415.0" text="Total Payment">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="544.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/RALogoremovebg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="573.0" layoutY="415.0" text="Total Rental Agreements">
+         <font>
+            <Font name="Tahoma" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="homeTotalRA" layoutX="820.0" layoutY="469.0" text="0">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="720.0" fill="BLACK" layoutX="181.0" layoutY="507.0" startX="-100.0" strokeWidth="2.0" style="-fx-opacity: 0.2;" AnchorPane.bottomAnchor="32.0" />
+      <Label layoutX="444.0" layoutY="508.0" text="By TrustMeJunior" AnchorPane.bottomAnchor="17.0" />
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="329.0" layoutY="440.0">
+         <image>
+            <Image url="@../images/bill.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="homeTotalUnpaidPayment" layoutX="90.0" layoutY="457.0" prefHeight="23.0" prefWidth="243.0" text="Unpaid: " textFill="RED">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Manager.ManagerCreateHostView">
+   <children>
+      <Label layoutX="330.0" layoutY="48.0" styleClass="text-header" text="Create Host Account Form" />
+      <Text layoutX="100.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Username:" />
+      <TextField fx:id="txtfieldUsername" layoutX="187.0" layoutY="130.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Password:" />
+      <TextField fx:id="txtfieldPassword" layoutX="187.0" layoutY="174.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Full Name:" />
+      <TextField fx:id="txtfieldFullname" layoutX="187.0" layoutY="216.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Email" />
+      <TextField fx:id="txtfieldEmail" layoutX="187.0" layoutY="257.0" prefWidth="200.0" />
+      <Text layoutX="100.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Date of Birth:" />
+      <DatePicker fx:id="datepickerDob" layoutX="187.0" layoutY="294.0" prefHeight="26.0" prefWidth="200.0" />
+      <Button fx:id="CreateHostAccount" layoutX="287.0" layoutY="328.0" mnemonicParsing="false" onAction="#createHost" styleClass="button-primary" text="Create" />
+      <Button fx:id="buttonReturnHome" layoutX="249.0" layoutY="377.0" mnemonicParsing="false" onAction="#returnHome" styleClass="button-secondary" text="Return Home" />
+   </children>
+</AnchorPane>

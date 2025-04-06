@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Host.HostCreatePaymentView">
+   <children>
+      <Label layoutX="400.0" layoutY="75.0" styleClass="text-header" text="Create Payment" />
+      <Text layoutX="125.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Amount:" />
+      <TextField fx:id="amountInput" layoutX="300.0" layoutY="150.0" prefWidth="200.0" promptText="Enter amount" />
+      <Text layoutX="125.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Due Date:" />
+      <DatePicker fx:id="dueDateInput" layoutX="300.0" layoutY="200.0" prefWidth="200.0" />
+      <Text layoutX="125.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Method:" />
+      <ChoiceBox fx:id="methodInput" layoutX="300.0" layoutY="245.0" prefWidth="200.0" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <Text layoutX="125.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Status:" />
+      <ChoiceBox fx:id="statusInput" layoutX="300.0" layoutY="295.0" prefWidth="200.0" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <Text layoutX="125.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-label" text="Rental Agreement" />
+      <ComboBox fx:id="rentalAgreementInput" layoutX="300.0" layoutY="350.0" prefWidth="200.0" promptText="Select rental agreement" />
+      <Button fx:id="createPaymentButton" layoutX="445.0" layoutY="451.0" mnemonicParsing="false" onAction="#createPayment" styleClass="button-primary" text="Create" />
+      <Button fx:id="returnHomeButton" layoutX="424.0" layoutY="500.0" mnemonicParsing="false" onAction="#returnHome" styleClass="button-secondary" text="Return Home" />
+   </children>
+</AnchorPane>

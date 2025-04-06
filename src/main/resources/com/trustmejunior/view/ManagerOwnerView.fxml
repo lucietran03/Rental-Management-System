@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Manager.ManagerOwnerView">
+    <top>
+        <HBox alignment="CENTER" styleClass="header">
+            <Label styleClass="text-header" text="Owner Information" />
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+            </padding>
+
+            <HBox spacing="10">
+                <Label text="Full Name:" />
+                <Label fx:id="fullName" style="-fx-font-weight: bold" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Email:" />
+                <Label fx:id="email" style="-fx-font-weight: bold" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Date of Birth:" />
+                <Label fx:id="dob" style="-fx-font-weight: bold" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Role:" />
+                <Label fx:id="role" style="-fx-font-weight: bold" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="30.0">
+                <Button fx:id="returnButton" styleClass="button-primary" text="Return" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane> 

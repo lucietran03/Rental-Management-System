@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../css/global.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trustmejunior.view.Manager.ManagerAllAccountView">
+   <children>
+      <AnchorPane prefHeight="86.0" prefWidth="800.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="ManagerLogoImageView" fitHeight="57.0" fitWidth="68.0" layoutX="46.4" layoutY="10.2" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.599999999999994" AnchorPane.leftAnchor="46.4" AnchorPane.topAnchor="10.2">
+               <image>
+                  <Image url="@../images/people.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="127.0" layoutY="31.0" text="Account Management">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="16.0" layoutY="102.0" text="Search for Account:" />
+      <TextField fx:id="textfieldsearch" layoutX="131.0" layoutY="96.0" prefHeight="26.0" prefWidth="630.0" />
+      <TableView fx:id="TableAllAccountManagerView" layoutX="16.0" layoutY="128.0" prefHeight="461.0" prefWidth="747.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="128.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="username" prefWidth="100.0" text="Username" />
+            <TableColumn fx:id="password" prefWidth="100.0" text="Password" />
+            <TableColumn fx:id="fullname" prefWidth="150.0" text="Full Name" />
+            <TableColumn fx:id="Email" prefWidth="177.59991455078125" text="Email" />
+            <TableColumn fx:id="date_of_birth" prefWidth="92.0" text="Date of Birth" />
+            <TableColumn fx:id="role" prefWidth="75.9999877929688" text="Role" />
+        </columns>
+      </TableView>
+      <Button fx:id="createAccountButton" layoutX="783.0" layoutY="323.0" mnemonicParsing="false" onAction="#createAccount" styleClass="button-primary" text="Create New Account">
+         <contextMenu>
+            <ContextMenu fx:id="contextMenuCreateAccount">
+              <items>
+                <MenuItem fx:id="buttonTenant" mnemonicParsing="false" text="Tenant">
+                  <graphic>
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/tenantlogo4removebg.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </MenuItem>
+               <MenuItem fx:id="buttonHost" mnemonicParsing="false" text="Host">
+                  <graphic>
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/Hostlogoremovebg.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </MenuItem>
+               <MenuItem fx:id="buttonOwner" mnemonicParsing="false" text="Owner">
+                  <graphic>
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/houseOwnerremovebg.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </MenuItem>
+               <MenuItem fx:id="buttonManager" mnemonicParsing="false" text="Manager">
+                  <graphic>
+                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/ManagerLogonobg.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </MenuItem>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Button>
+      <Button fx:id="viewAccountButton" layoutX="783.0" layoutY="375.0" mnemonicParsing="false" onAction="#viewAccount" styleClass="button-primary" text="View Account Detail" />
+      <Button fx:id="editAccountButton" layoutX="806.0" layoutY="427.0" mnemonicParsing="false" onAction="#editAccount" styleClass="button-primary" text="Edit Account" />
+      <Button fx:id="deleteAccountButton" layoutX="798.0" layoutY="479.0" mnemonicParsing="false" onAction="#deleteAccount" styleClass="button-primary" text="Delete Account" />
+      <ComboBox fx:id="droplistRole" layoutX="806.0" layoutY="195.0" prefHeight="40.0" prefWidth="106.0" promptText="Role" styleClass="combo-box" stylesheets="@../css/global.css" />
+      <Button fx:id="removeFilterButton" layoutX="792.0" layoutY="251.0" mnemonicParsing="false" onAction="#removeFilter" styleClass="button-danger" stylesheets="@../css/global.css" text="Remove Filters">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
